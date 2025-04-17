@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">Modern Resume Builder</h1>
+        <p class="subtitle">
+            Create a professional resume in minutes. Choose from multiple templates and print your resume.
+        </p>
+
+        <div class="resume-builder">
+            <!-- Left Column: Forms and Controls -->
+            <div class="form-container">
+                <!-- Template Selector -->
+                <div class="card template-selector-card">
+                    <div class="card-content">
+                        <h3 class="section-title">Choose a Template</h3>
+                        <div class="template-grid">
+                            <div class="template-option">
+                                <input type="radio" name="template" id="modern" value="modern" checked>
+                                <label for="modern" class="template-label">
+                                    <div class="template-preview modern-preview">
+                                        <div class="template-header"></div>
+                                        <div class="template-body"></div>
+                                    </div>
+                                    <div class="template-name">Modern</div>
+                                    <p class="template-description">Clean and contemporary design with a focus on readability</p>
+                                </label>
+                            </div>
+                            <div class="template-option">
+                                <input type="radio" name="template" id="classic" value="classic">
+                                <label for="classic" class="template-label">
+                                    <div class="template-preview classic-preview">
+                                        <div class="template-header"></div>
+                                        <div class="template-body"></div>
+                                    </div>
+                                    <div class="template-name">Classic</div>
+                                    <p class="template-description">Traditional resume layout, perfect for formal applications</p>
+                                </label>
+                            </div>
+                            <div class="template-option">
+                                <input type="radio" name="template" id="minimal" value="minimal">
+                                <label for="minimal" class="template-label">
+                                    <div class="template-preview minimal-preview">
+                                        <div class="template-header"></div>
+                                        <div class="template-body"></div>
+                                    </div>
+                                    <div class="template-name">Minimal</div>
+                                    <p class="template-description">Sleek and minimalist design that highlights your content</p>
+                                </label>
+                            </div>
+                            <div class="template-option">
+                                <input type="radio" name="template" id="executive" value="executive">
+                                <label for="executive" class="template-label">
+                                    <div class="template-preview executive-preview">
+                                        <div class="template-header"></div>
+                                        <div class="template-body"></div>
+                                    </div>
+                                    <div class="template-name">Executive</div>
+                                    <p class="template-description">Professional layout with a bold header, ideal for senior roles</p>
+                                </label>
+                            </div>
+                            <div class="template-option">
+                                <input type="radio" name="template" id="creative" value="creative">
+                                <label for="creative" class="template-label">
+                                    <div class="template-preview creative-preview">
+                                        <div class="template-header"></div>
+                                        <div class="template-body"></div>
+                                    </div>
+                                    <div class="template-name">Creative</div>
+                                    <p class="template-description">Modern design with accent colors and unique layout elements</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Tabs -->
+                <div class="card form-card">
+                    <div class="card-content">
+                        <div class="tabs">
+                            <div class="tab-list">
+                                <button class="tab-trigger active" data-tab="personal">Personal</button>
+                                <button class="tab-trigger" data-tab="education">Education</button>
+                                <button class="tab-trigger" data-tab="experience">Experience</button>
+                                <button class="tab-trigger" data-tab="skills">Skills</button>
+                                <button class="tab-trigger" data-tab="projects">Projects</button>
+                            </div>
+
+                            <!-- Personal Info Tab -->
+                            <div class="tab-content active" id="personal-tab">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="form-field">
+                                            <label for="name">Full Name</label>
+                                            <input type="text" id="name" name="name" placeholder="John Doe">
+                                        </div>
+                                        <div class="form-field">
+                                            <label for="title">Professional Title</label>
+                                            <input type="text" id="title" name="title" placeholder="Software Engineer">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-field">
+                                            <label for="email">Email</label>
+                                            <input type="email" id="email" name="email" placeholder="john.doe@example.com">
+                                        </div>
+                                        <div class="form-field">
+                                            <label for="phone">Phone</label>
+                                            <input type="text" id="phone" name="phone" placeholder="(123) 456-7890">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-field">
+                                            <label for="location">Location</label>
+                                            <input type="text" id="location" name="location" placeholder="New York, NY">
+                                        </div>
+                                        <div class="form-field">
+                                            <label for="website">Website</label>
+                                            <input type="text" id="website" name="website" placeholder="https://johndoe.com">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-field">
+                                            <label for="linkedin">LinkedIn</label>
+                                            <input type="text" id="linkedin" name="linkedin" placeholder="linkedin.com/in/johndoe">
+                                        </div>
+                                        <div class="form-field">
+                                            <label for="github">GitHub</label>
+                                            <input type="text" id="github" name="github" placeholder="github.com/johndoe">
+                                        </div>
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="summary">Professional Summary</label>
+                                        <textarea id="summary" name="summary" rows="4" placeholder="A brief summary of your professional background and goals..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Education Tab -->
+                            <div class="tab-content" id="education-tab">
+                                <div id="education-container">
+                                    <!-- Education items will be added here dynamically -->
+                                </div>
+                                <button class="add-button" id="add-education">
+                                    <span class="plus-icon">+</span>
+                                    Add Education
+                                </button>
+                            </div>
+
+                            <!-- Experience Tab -->
+                            <div class="tab-content" id="experience-tab">
+                                <div id="experience-container">
+                                    <!-- Experience items will be added here dynamically -->
+                                </div>
+                                <button class="add-button" id="add-experience">
+                                    <span class="plus-icon">+</span>
+                                    Add Experience
+                                </button>
+                            </div>
+
+                            <!-- Skills Tab -->
+                            <div class="tab-content" id="skills-tab">
+                                <div class="card skill-card">
+                                    <div class="card-content">
+                                        <div class="form-field">
+                                            <label for="technical-skills">Technical Skills</label>
+                                            <div class="skill-input-container">
+                                                <input type="text" id="technical-skills" placeholder="Add a technical skill (e.g., JavaScript)">
+                                                <button id="add-technical-skill">Add</button>
+                                            </div>
+                                            <div class="skill-tags" id="technical-skills-container"></div>
+                                        </div>
+                                        <div class="form-field">
+                                            <label for="soft-skills">Soft Skills</label>
+                                            <div class="skill-input-container">
+                                                <input type="text" id="soft-skills" placeholder="Add a soft skill (e.g., Communication)">
+                                                <button id="add-soft-skill">Add</button>
+                                            </div>
+                                            <div class="skill-tags" id="soft-skills-container"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Projects Tab -->
+                            <div class="tab-content" id="projects-tab">
+                                <div id="projects-container">
+                                    <!-- Project items will be added here dynamically -->
+                                </div>
+                                <button class="add-button" id="add-project">
+                                    <span class="plus-icon">+</span>
+                                    Add Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button id="save-button" class="primary-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="button-icon"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+                        Save Resume
+                    </button>
+                    <button id="print-button" class="secondary-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="button-icon"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                        Print Resume
+                    </button>
+                </div>
+
+                <!-- Save Alert -->
+                <div id="save-alert" class="alert hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="alert-icon"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                    <div class="alert-content">
+                        <h4 class="alert-title">Success</h4>
+                        <p class="alert-description">Your resume has been saved to local storage.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Resume Preview -->
+            <div class="preview-container">
+                <div class="card preview-card">
+                    <div class="resume-preview-for-pdf" id="resume-preview">
+                        <!-- Resume preview will be rendered here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Templates for dynamic content -->
+    <template id="education-item-template">
+        <div class="item-card education-item">
+            <div class="item-header">
+                <h3 class="item-title">Education #<span class="item-number"></span></h3>
+                <button class="delete-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                </button>
+            </div>
+            <div class="item-content">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label>Institution</label>
+                        <input type="text" class="institution" placeholder="University of Example">
+                    </div>
+                    <div class="form-field">
+                        <label>Degree</label>
+                        <input type="text" class="degree" placeholder="Bachelor of Science">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label>Field of Study</label>
+                        <input type="text" class="fieldOfStudy" placeholder="Computer Science">
+                    </div>
+                    <div class="form-field date-field">
+                        <div class="date-input">
+                            <label>Start Date</label>
+                            <input type="text" class="startDate" placeholder="MM/YYYY">
+                        </div>
+                        <div class="date-input">
+                            <label>End Date</label>
+                            <input type="text" class="endDate" placeholder="MM/YYYY or Present">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label>Description</label>
+                    <textarea class="description" rows="3" placeholder="Relevant coursework, achievements, or activities..."></textarea>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="experience-item-template">
+        <div class="item-card experience-item">
+            <div class="item-header">
+                <h3 class="item-title">Experience #<span class="item-number"></span></h3>
+                <button class="delete-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                </button>
+            </div>
+            <div class="item-content">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label>Company</label>
+                        <input type="text" class="company" placeholder="Example Corp">
+                    </div>
+                    <div class="form-field">
+                        <label>Position</label>
+                        <input type="text" class="position" placeholder="Software Engineer">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label>Location</label>
+                        <input type="text" class="location" placeholder="New York, NY">
+                    </div>
+                    <div class="form-field date-field">
+                        <div class="date-input">
+                            <label>Start Date</label>
+                            <input type="text" class="startDate" placeholder="MM/YYYY">
+                        </div>
+                        <div class="date-input">
+                            <label>End Date</label>
+                            <input type="text" class="endDate" placeholder="MM/YYYY or Present">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label>Description</label>
+                    <textarea class="description" rows="4" placeholder="Describe your responsibilities and achievements..."></textarea>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="project-item-template">
+        <div class="item-card project-item">
+            <div class="item-header">
+                <h3 class="item-title">Project #<span class="item-number"></span></h3>
+                <button class="delete-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                </button>
+            </div>
+            <div class="item-content">
+                <div class="form-field">
+                    <label>Project Title</label>
+                    <input type="text" class="title" placeholder="E-commerce Website">
+                </div>
+                <div class="form-field">
+                    <label>Technologies Used</label>
+                    <input type="text" class="technologies" placeholder="React, Node.js, MongoDB">
+                </div>
+                <div class="form-field">
+                    <label>Project Link</label>
+                    <input type="text" class="link" placeholder="https://github.com/username/project">
+                </div>
+                <div class="form-field">
+                    <label>Description</label>
+                    <textarea class="description" rows="3" placeholder="Describe the project, your role, and key achievements..."></textarea>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="skill-tag-template">
+        <div class="skill-tag">
+            <span class="skill-text"></span>
+            <button class="remove-skill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
